@@ -1,2 +1,59 @@
-<h1>Welcome to TypeKata!</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TypeKata</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS for bootstrap-->
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="fonts.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- NAVBAR -->
+  <nav class="navbar" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand brand" href="#">TypeKata</a>
+    </div>
+  
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Katas</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">About us</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
 
+  <div class="container">
+    <div class="jumbotron col-md-8 col-md-offset-2">
+      <h1> Welcome to <strong class='brand'>TypeKata</strong> </h1>
+      <p> Need to enhance those <strong>typing skills</strong> of yours? You've come to the right place buddy!</p>
+      <p class='text-center'><a href='/katas/random' class="btn btn-primary btn-lg">Random Kata</a></p>
+    </div>
+  </div>
+  <div class="container kata-list">
+    {{#kata-list}}
+      <div class="list-group">
+        <a href="/katas/{{num}}" class="list-group-item active">
+          <h4 class="list-group-item-heading">{{title}}</h4>
+          <span class="badge badge-info">{{difficulty}}</span>
+          <p class="list-group-item-text">{{description}}</p>
+        </a>
+      </div>
+    {{/kata-list}}
+  </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <!-- Latest compiled and minified JavaScript for bootstrap-->
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/js/bootstrap.min.js"></script>
+  </body>
+</html>
