@@ -58,6 +58,7 @@ GEM
     mustache-rails (0.2.3)
       actionpack (>= 3.1)
       mustache (~> 0.99.4)
+    pg (0.16.0)
     polyglot (0.3.3)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -134,6 +135,7 @@ DEPENDENCIES
   jquery-rails
   mustache
   mustache-rails
+  pg
   rails (= 4.0.0)
   rspec
   rspec-rails
