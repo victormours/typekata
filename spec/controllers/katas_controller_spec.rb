@@ -8,4 +8,12 @@ describe KatasController do
       assigns(:katas).should be_present
     end
   end
+
+  describe "#show" do
+    it "loads the selected kata" do
+      kata = Kata.create
+      get :show, { id: kata.id }
+      assigns(:kata).should == kata
+    end
+  end
 end
