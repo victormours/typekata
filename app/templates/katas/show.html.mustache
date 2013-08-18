@@ -5,15 +5,15 @@
 
 <div class="container">
   <h2> {{title}}</h2>
-  <p id='kata-content'>{{text}}</p>
+  <code id='kata-content'>{{text}}</code>
   <div class="alert alert-success hide">
     <strong> Congratulations ! </strong> You successfully passed this kata. You might want to try the <a href="/kata/next" class="alert-link">next one</a>.
   </div>
   <div class="alert alert-error hide">
-    <strong> Not quite yet ! </strong> Something's different. But what ? 
+    <strong> Not quite yet ! </strong> Something's different. But what ?
   </div>
   <div class='container'>
-    <textarea id='kata-input' class="form-control" rows="15" placeholder="Start typing when you're ready" autofocus></textarea>
+    <code><textarea id='kata-input' class="form-control" rows="15" placeholder="Start typing when you're ready" autofocus></textarea></code>
     <br>
     <p class='text-right'> <button id='validate-kata' class="btn btn-primary">Check it !</button> </p>
   </div>

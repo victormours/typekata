@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'mustache'
 gem 'mustache-rails', :require => 'mustache/railtie'
+gem 'sprockets', '~> 2.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
