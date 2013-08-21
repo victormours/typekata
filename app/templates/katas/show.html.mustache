@@ -3,19 +3,21 @@
   <li class='active'>{{name}}</li>
 </ul>
 
-<div class="container">
-  <h2> {{title}}</h2>
-  <code id='kata-content'>{{text}}</code>
+<div class="container row language-{{language}}"> 
   <div class="alert alert-success hide">
     <strong> Congratulations ! </strong> You successfully passed this kata. You might want to try the <a href="/kata/next" class="alert-link">next one</a>.
   </div>
   <div class="alert alert-error hide">
     <strong> Not quite yet ! </strong> Something's different. But what ?
   </div>
-  <div class='container'>
-    <code><textarea id='kata-input' class="form-control" rows="15" placeholder="Start typing when you're ready" autofocus></textarea></code>
-    <br>
-    <p class='text-right'> <button id='validate-kata' class="btn btn-primary">Check it !</button> </p>
+
+  <pre class="col-md-6"><code id="kata-content">{{text}}</code></pre>
+  <div class="col-md-6">
+    <div class='container'>
+      <textarea id='kata-input' class="form-control" rows="15" placeholder="Start typing when you're ready" autofocus></textarea>
+      <br>
+      <p class='text-right'> <button id='validate-kata' class="btn btn-primary">Check it !</button> </p>
+    </div>
   </div>
 </div>
 
