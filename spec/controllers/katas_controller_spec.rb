@@ -16,4 +16,11 @@ describe KatasController do
       assigns(:kata).should == kata
     end
   end
+
+  describe "#new" do
+    it "is successful" do
+      get :new
+      response.should be_success
+    end
+  end
 end

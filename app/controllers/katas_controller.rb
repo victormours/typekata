@@ -3,6 +3,9 @@ class KatasController < ApplicationController
     @katas = Kata.all
   end
 
+  def new
+  end
+
   def show
     @kata = Kata.find(params[:id])
   end
