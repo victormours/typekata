@@ -2,7 +2,4 @@ name: 		Your New Jekyll Site
 markdown: 	redcarpet
 pygments: 	true
 
-url: 		victormours.github.io
-
-# url:		http://localhost:4000
-baseurl:	/typekata/
+baseurl:	/typekata
