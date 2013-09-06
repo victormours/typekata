@@ -1,5 +1,6 @@
-name: 		Your New Jekyll Site
+name: 		"TypeKata"
 markdown: 	redcarpet
 pygments: 	true
 
 baseurl:	/typekata
+

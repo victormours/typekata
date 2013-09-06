@@ -6,41 +6,44 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
+        <!-- Source Sans Pro via google font API -->
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300italic' rel='stylesheet' type='text/css'>
+        
+        <!-- GoodDog font for title -->
+        <link href='{{site.baseurl}}/font/gooddog_regular_macroman/stylesheet.css' rel='stylesheet' type='text/css'>
+        
         <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="{{site.baseurl}}/css/syntax.css">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
+
+        <!-- jQuery -->
+        <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
+        <!-- Flowtype (limit number of caracter per line) -->
+        <script src='{{site.baseurl}}/js/flowtype.js'></script>
 
     </head>
     <body>
-
-        <div class="container">
-          <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
+        <header>
+            <div class='img-container'>
+                <img src='{{site.baseurl}}/img/back.jpg'>
             </div>
+        <h1 class="title">{{ site.name }}</h1>
+        </header>
+        <div class='body-container'>
+            {{ content }}
+        </div>
 
-                {{ content }}
-
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  Your Name<br />
-                  What You Are<br />
-                  your@email.com
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-                  <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> <!-- /container -->
-
+    <script> 
+        $('body').flowtype({
+            minimum   : 200,
+            maximum   : 1500,
+            minFont   : 16,
+            maxFont   : 40,
+            fontRatio : 60,
+            lineRatio : 1.45
+        }) 
+    </script>
     </body>
 </html>
