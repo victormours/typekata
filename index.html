@@ -7,10 +7,13 @@ title: TypeKata Blog
 	<p class="about">
 		Follow the development of our first project: <a href='//typekata.com/'> TypeKata! </a>
 	</p>
-	<h2>Last Posts</h2>
 	<ul class="posts">
 	  {% for post in site.posts %}
-	    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+	  	<li>
+	        <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+	        <time class='date-post' datetime="{{post.date | date:'%Y-%m-%d'}}">{{post.date | date:"%d %b" }}</time> 
+      		<p class='post'>{{ post.excerpt | truncatewords: 30}}</p>
+      	</li>	
 	  {% endfor %}
 	</ul>
 </div>

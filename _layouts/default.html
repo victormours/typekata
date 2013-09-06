@@ -29,7 +29,7 @@
             <div class='img-container'>
                 <img src='{{site.baseurl}}/img/back.jpg'>
             </div>
-        <h1 class="title">{{ site.name }}</h1>
+        <h1 class="title"><a href='{{site.baseurl}}/'>{{ site.name }}</a></h1>
         </header>
         <div class='body-container'>
             {{ content }}
@@ -37,13 +37,13 @@
 
     <script> 
         $('body').flowtype({
-            minimum   : 200,
-            maximum   : 1500,
-            minFont   : 16,
+            minimum   : 500,
+            maximum   : 1200,
+            minFont   : 12,
             maxFont   : 40,
-            fontRatio : 60,
+            fontRatio : 50,
             lineRatio : 1.45
-        }) 
+        });
     </script>
     </body>
 </html>

@@ -12,149 +12,176 @@
 
 html, body { height: 100%; }
 
+
 body {
   background-color: #FFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
-  font-size: small;
-  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  color:rgb(35,35,35);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
-
-h1 { margin-bottom: 1em; }
-p { margin: 1em 0; }
-
-a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
-
-/*****************************************************************************/
-/*
-/* Home
-/*
-/*****************************************************************************/
-ul.posts {
-  list-style-type: none;
-  margin-bottom: 2em;
+h1,h2,h3,h4,h5,h6,p {
+ font-family: inherit;
+ font-size: inherit;
 }
 
-ul.posts li {
-  line-height: 1.75em;
+h1 {
+ font-size: 4em;
+ line-height: 1em;
 }
 
-ul.posts span {
-  color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
+h2 {
+ font-size: 2em;
+ line-height: 1em;
 }
-
-/*****************************************************************************/
-/*
-/* Site
-/*
-/*****************************************************************************/
-
-.site {
-  font-size: 115%;
-  text-align: justify;
-  width: 42em;
-  margin: 3em auto 2em;
+p{
+  font-size: 1em;
   line-height: 1.5em;
 }
 
-.site .header a {
-  font-weight: bold;
+a {
+  color:inherit;
   text-decoration: none;
 }
 
-.site .header h1.title {
-  display: inline-block;
-  margin-bottom: 2em;
+p a {
+  color: rgba(50,100,100, 1);
 }
 
-.site .header h1.title a {
-  color: #a00;
+p a:hover {
+  text-decoration: underline;
 }
 
-.site .header h1.title a:hover {
-  color: #000;
+ul {
+  list-style-type:none;
 }
 
-.site .header a.extra {
-  color: #aaa;
-  margin-left: 1em;
+.title{
+  font-family: helvetica, sans-serif;
 }
 
-.site .header a.extra:hover {
-  color: #000;
-}
+/*****************************************************************************/
+/*
+/* Default 
+/*
+/*****************************************************************************/
 
-.site .meta {
-  color: #aaa;
-}
-
-.site .footer {
-  font-size: 80%;
-  color: #666;
-  border-top: 4px solid #eee;
-  margin-top: 2em;
+header{
+  width:100%;
+  height:15em;
+  position:relative;
   overflow: hidden;
 }
 
-.site .footer .contact {
-  float: left;
-  margin-right: 3em;
+/*Add a color green filter*/
+header .img-container {
+  position: absolute;
+  top:0;
+  background-color: rgba(150,255,255,0.4);
+  width:100%;
+  height:100%;
 }
 
-.site .footer .contact a {
-  color: #8085C1;
+header img{
+  position:absolute;
+  width:100%;
+  min-width:800px;
+  z-index: -1;
 }
 
-.site .footer .rss {
-  margin-top: 1.1em;
-  margin-right: -.2em;
-  float: right;
+header h1{
+  margin:10px;
+  position: absolute;
+  width:500px;
+  font-size: 5em;
+  bottom:0px;
+  margin-bottom: 1em;
+  color:white;
 }
 
-.site .footer .rss img {
-  border: 0;
+@media (max-width: 380px){
+  header h1{
+    font-size: 4em;
+  }
 }
+
+@media(max-width:449px){
+  .body-container{
+    padding:1em 10px;
+  }
+}
+@media(min-width:450px){
+  .body-container{
+    padding:2em 18%;
+  }
+}
+
+h2{
+  /*line-height: 0em;*/
+}
+
+@media(min-width:450px){
+  time.date-post{
+    word-spacing:; 
+    display: block;
+    position:absolute;
+    left:-3em;
+    top:0.15em;
+    width:2.2em;
+    padding:0em 0.2em 0.5em ;
+    border-right:solid 2px lightgrey;
+    font-size: 2.6em;
+    font-style: italic;
+  }
+}
+
+@media(max-width:450px){
+  time.date-post{
+    font-size: 1em;
+  }
+}
+
+time.date-post{
+    text-align:right;
+    font-weight: lighter;
+    color:lightgrey;
+}
+/*****************************************************************************/
+/*
+/* Index 
+/*
+/*****************************************************************************/
+.about {
+
+  color:grey;
+  margin-bottom:2em;
+}
+
+
+ul.posts li{
+  position:relative;
+  margin:2em 0;
+  text-align: justify;
+}
+
 
 /*****************************************************************************/
 /*
-/* Posts
+/* Article 
 /*
 /*****************************************************************************/
 
-/* standard */
-.post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .4em;
+div.post-container {
+  position: relative;
 }
 
-.post ul, .post ol {
-  margin-left: 1.35em;
+.post {
+  margin-top: 10px;
+  /*text-align: justify;*/
 }
 
-.post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .2em;
+.post p{
+  margin-bottom:1em;
 }
 
-.post pre code {
-  border: none;
-}
-
-/* terminal */
-.post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #FFF;
-}
-
-.post pre.terminal code {
-  background-color: #333;
-}
