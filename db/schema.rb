@@ -11,11 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130812020638) do
+ActiveRecord::Schema.define(version: 20130902142704) do
 
   create_table "kata", force: true do |t|
     t.string   "name"
     t.text     "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "language_id"
+    t.text     "description"
+  end
+
+  create_table "languages", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

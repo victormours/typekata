@@ -4,6 +4,7 @@ class KatasController < ApplicationController
   end
 
   def new
+    @kata = Kata.new
   end
 
   def show
