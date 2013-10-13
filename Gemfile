@@ -30,6 +30,7 @@ gem 'mustache'
 gem 'mustache-rails', :require => 'mustache/railtie'
 gem 'sprockets', '~> 2.0'
 gem 'simple_form'
+gem 'haml'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
