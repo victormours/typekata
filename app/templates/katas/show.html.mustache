@@ -21,20 +21,3 @@
     </div>
   </div>
 </div>
-
-  <!-- Script for the validation of typekata -->
-  <!-- For the first draft, inside the html directly -->
-  <script>
-$('#validate-kata').click(function() {
-  console.log('Tadaa')
-  console.log($('#kata-content').text())
-  console.log($('#kata-input').val())
-  if ($('#kata-content').text() === $('#kata-input').val()) {
-    $('.alert-success').removeClass('hide')
-    $('.alert-error').addClass('hide')
-  } else {
-    $('.alert-error').removeClass('hide')
-    $('.alert-success').addClass('hide')
-  }
-})
-  </script>

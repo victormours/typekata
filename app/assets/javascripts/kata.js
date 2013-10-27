@@ -9,7 +9,18 @@ TypeKata.Kata = (function(){
     $(kataInput).on("keyup", function(){
       initTimer()
       updateWPM()
+      validateKata()
     })
+  }
+
+  function validateKata() {
+    if ($('#kata-content').text() === $('#kata-input').val()) {
+      $('.alert-success').removeClass('hide')
+      $('.alert-error').addClass('hide')
+    } else {
+      $('.alert-error').removeClass('hide')
+      $('.alert-success').addClass('hide')
+    }
   }
 
   function initTimer(){
