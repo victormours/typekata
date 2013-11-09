@@ -16,4 +16,4 @@
 /tmp
 
 # Ignore the file containing secrets such as API keys
-/config/secrets.yml
+.env
