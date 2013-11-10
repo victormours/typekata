@@ -58,7 +58,5 @@ TypeKata.Kata = (function(){
 })()
 
 $(function() {
-  console.log("binding and stuff")
   TypeKata.Kata.init()
 })
-$(document).on('page:load', TypeKata.Kata.init)
