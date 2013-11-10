@@ -6,7 +6,7 @@ module Views
           id: kata.id,
           name: kata.name,
           difficulty: "normal",
-          description: "A test kata"
+          description: "A simple kata"
         }
       end
     end
