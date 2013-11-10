@@ -9,7 +9,7 @@ module Views
     end
 
     def language
-
+      @kata.language.name
     end
   end
 end
