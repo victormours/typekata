@@ -16,9 +16,9 @@ TypeKata.Kata = (function(){
   function validateKata() {
     if ($('#kata-content').text() === $('#kata-input').val()) {
       $('.alert-success').removeClass('hide')
-      $('.alert-error').addClass('hide')
+      // $('.alert-error').addClass('hide')
     } else {
-      $('.alert-error').removeClass('hide')
+      // $('.alert-error').removeClass('hide')
       $('.alert-success').addClass('hide')
     }
   }
@@ -39,7 +39,7 @@ TypeKata.Kata = (function(){
   }
 
   function characterCount(){
-   return $(kataInput)[0].value.length 
+   return $(kataInput)[0].value.length
   }
 
   function computeWPM(characterCount, startTime, currentTime){
@@ -58,5 +58,7 @@ TypeKata.Kata = (function(){
 })()
 
 $(function() {
+  console.log("binding and stuff")
   TypeKata.Kata.init()
 })
+$(document).on('page:load', TypeKata.Kata.init)

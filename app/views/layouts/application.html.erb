@@ -5,6 +5,7 @@
 <meta name="description" content="Type faster. Type smarter. Become a better developer.">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <!-- Latest compiled and minified CSS for bootstrap-->
 <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap.min.css" rel="stylesheet">
 <link href="/assets/fonts.css" rel="stylesheet">
@@ -18,10 +19,10 @@
   <script src="/assets/prism.js"></script>
 
   <!-- Custom css -->
-  {{> css/css_headers }}
+  <%= stylesheet_link_tag "application" %>
 
   <!-- Custom javascript -->
-  {{> javascripts/js_headers }}
+  <%= javascript_include_tag "application" %>
 </head>
 <body>
   <!-- NAVBAR -->
@@ -34,23 +35,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand brand" href="">TypeKata</a>
+      <%= link_to "TypeKata", root_path, class: "navbar-brand brand" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Katas</a></li>
+        <li class="active"><%= link_to "Katas", root_path %></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">About us</a></li>
-      </ul>
+      <!-- <ul class="nav navbar&#45;nav navbar&#45;right"> -->
+      <!--   <li><a href="#">About us</a></li> -->
+      <!-- </ul> -->
     </div><!-- /.navbar-collapse -->
   </nav>
 
-  {{yield}}
-
-  {{> css/css_headers }}
-  {{> javascripts/google_analytics_tag }}
+  <%= yield %>
+  <%= render partial: "javascripts/google_analytics_tag" %>
 </body>
 </html>
