@@ -2,11 +2,10 @@ Typekata::Application.routes.draw do
   root 'katas#index'
 
   resources :katas, only: [:index, :new, :show]
+
+  get "about_us", to: "pages#about_us"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
