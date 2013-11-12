@@ -1,3 +1,3 @@
 class Language < ActiveRecord::Base
-  has_many :katas
+  has_many :kata
 end

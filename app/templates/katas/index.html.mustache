@@ -2,13 +2,13 @@
   <div class="jumbotron col-md-8 col-md-offset-2">
     <h1> Welcome to <strong class='brand'>TypeKata</strong> </h1>
     <p> Need to enhance those <strong>typing skills</strong> of yours? You've come to the right place buddy!</p>
-    <!-- <p class='text-center'><a href='/katas/random' class="btn btn-primary btn-lg">Random Kata</a></p> -->
+    <p class='text-center'><a href={{featured_kata_path}} class="btn btn-primary btn-lg">Start a Kata</a></p>
   </div>
 </div>
 <div class="container kata-list">
   {{#katas}}
   <div class="list-group">
-    <a href="/katas/{{id}}" class="list-group-item">
+    <a href="{{path}}" class="list-group-item">
       <h4 class="list-group-item-heading">{{name}}</h4>
       <span class="badge badge-info">{{difficulty}}</span>
       <p class="list-group-item-text">{{description}}</p>

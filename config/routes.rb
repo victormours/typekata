@@ -1,7 +1,7 @@
 Typekata::Application.routes.draw do
   root 'katas#index'
 
-  resources :katas, only: [:index, :new, :show]
+  resources :katas, only: [:index, :new, :create, :show]
 
   get "about_us", to: "pages#about_us"
   # The priority is based upon order of creation: first created -> highest priority.

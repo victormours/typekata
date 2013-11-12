@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe KatasController do
+describe KataController do
   describe "#index" do
     it "loads all katas" do
       Kata.create
