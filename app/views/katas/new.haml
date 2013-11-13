@@ -1,7 +1,16 @@
 .container
-  = simple_form_for :kata do |f|
-    = f.input :name
-    = f.input :language_id
-    = f.input :description
-    = f.input :text
-    = f.button :submit
+  = simple_form_for :kata  do |f|
+    .form-group
+      = f.input :name, class: "span6"
+      = f.input :language_id
+
+    .form-group
+      = f.label "What's your Kata all about?"
+      = f.text_area :description
+
+    .form-group
+      = f.label "Code:"
+      = f.text_area :text, {placeholder: "Your code goes here!"}
+
+    .form-group
+      = f.button :submit, class: "btn btn-primary"

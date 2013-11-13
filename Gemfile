@@ -23,6 +23,7 @@ end
 group :development do
   gem 'sqlite3'
   gem 'capistrano'
+  gem 'database_cleaner'
 end
 
 group :test do

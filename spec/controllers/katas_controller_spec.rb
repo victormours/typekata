@@ -1,9 +1,11 @@
 require "spec_helper"
 
-describe KataController do
+describe KatasController do
   describe "#index" do
+    let!(:kata) { Kata.create }
+
     it "loads all katas" do
-      Kata.create
+      puts "getting index"
       get :index
       assigns(:katas).should be_present
     end
@@ -18,9 +20,10 @@ describe KataController do
   end
 
   describe "#new" do
-    it "is successful" do
+    let!(:javascript) { Language.create!(name: "javascript") }
+    it "loads languages" do
       get :new
-      response.should be_success
+      @languages.should == [javascript]
     end
   end
 end
