@@ -21,14 +21,16 @@ group :doc do
 end
 
 group :development do
+  gem 'spring'
+  gem 'pry'
   gem 'sqlite3'
   gem 'capistrano'
-  gem 'database_cleaner'
 end
 
 group :test do
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'database_cleaner'
 end
 
 group :production do

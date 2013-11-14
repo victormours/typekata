@@ -5,6 +5,7 @@ class KatasController < ApplicationController
 
   def new
     @kata = Kata.new
+    @languages = Language.all
   end
 
   def create
